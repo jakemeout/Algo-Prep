@@ -14,7 +14,7 @@ const sumZero = (arr) => {
         }else if(sum > 0){
             right --;
         } else {
-            left ++
+            left ++;
         }
     }
 
