@@ -1,0 +1,7 @@
+Searching for a pair of values, usually a pair. 
+
+You have two references (a variable of numbers referring to indices) with a pointer and a second pointer. 
+
+
+
+
