@@ -1,0 +1,4 @@
+Linear Search:
+
+Searching each index in an array, until it returns the value, if not returne -1
+

@@ -1,0 +1,24 @@
+What is Recursion?
+
+A process (a function in our case) that calls it self. 
+Examples: 
+    - JSON.parse / JSON.stringify
+    - document.getElementById and DOM traversal algorithms
+    - Object traversal
+    - Complex data structure traversal 
+    - Sometimes cleaner alternative to iteration
+
+
+Call Stack
+
+    - Data structure called a stack
+    - When a function is invoked it is placed on top (pushed)
+    - When js sees the return keyword the compiler removes it from the stack (pop)
+
+
+Game Plan for recursive functions 1 parts
+
+    1. Different Input - Invoking the function over and over
+    2. Base case - where the recursion stops
+
+
