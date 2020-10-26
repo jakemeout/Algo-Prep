@@ -2,3 +2,8 @@ Linear Search:
 
 Searching each index in an array, until it returns the value, if not returne -1
 
+Binary search:
+
+- Faster
+- Search by divide and conquer
+- splits the array by start end and middle and checks between them to guess if it is greater or less then the guesses

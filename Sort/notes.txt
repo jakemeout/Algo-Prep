@@ -1,0 +1,40 @@
+First review the built in Array.sort() method 
+
+String Unicode Code Points
+    - Unicode is used to represent strings 
+    - Every item in the array is converted to a string and then the unicode value of that is taken and then it is sorted
+
+How it works:
+The built-in sort method accepts an optional comparator function
+You can use this comparator function to tell JavaScript how you want it to sort
+The comparator looks at pairs of elements (a and b), determines their sort order based on the return value
+If it returns a negative number, a should come before b
+If it returns a positive number, a should come after b,
+If it returns 0, a and b are the same as far as the sort is concerned
+
+
+Bubble sort:
+ - Not that efficient, but good to help understand how other algorithms improve upon it.  
+ - Swapping two values on first pass in the areas (sinking sort - pessimistic). Bubbling the largest value until the top.
+  - Eventually bubbles the largest item on top.
+
+  PsuedoCode: Bubblesort
+- Start looping with a variable called i the end of the array towards the beginning
+- Start an inner loop with a variable called j from the beginning until i - 1
+- If arr[j] is greater than arr[j+1], swap those two values!
+- Return the sorted array
+
+
+           Time best Complexity   Time Complexity Average  Space Complexity
+Bubble      O(n)                 O(n^2)                   O(1)
+Insertion   O(n)                 O(n^2)                   O(1)
+Selection   O(n^2)               O(n^2)                   O(1)
+
+
+
+
+Complicated Sorts:
+
+Merged Sorts:
+  -Split up the array into individual arrays
+  -Merge and sort the arrays until you get back to 1 array
