@@ -1,0 +1,4 @@
+Binary Search tree
+
+Left side gets less  and right gets greater
+    - This makes it easy and fast for look up and insertion
