@@ -1,0 +1,7 @@
+Very similar to a Binary search tree, there is a max and min binary heap. 
+
+
+MaxBinaryHeap -> Largest number on top for example and the children are smaller
+Any number smaller than the parent 
+
+Reverse this for Min 
