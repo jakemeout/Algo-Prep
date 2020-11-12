@@ -1,0 +1,7 @@
+What is a graph?
+
+A graph is a data structure that consists of a finite (and possibly mutable) set of vertices or nodes or points, 
+together with a set of unordered pairs of these vertices for an underected graph or a set of ordered pairs for a directed graph.
+
+nodes and pairs or connections
+

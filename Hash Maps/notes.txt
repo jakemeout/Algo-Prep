@@ -1,0 +1,8 @@
+Linear Probing
+
+Linear probing involves storing one thing in each position and looking ahead in an empty space to store something.
+
+
+Separate Chaining 
+
+Putting the results in a nested array 
