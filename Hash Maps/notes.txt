@@ -3,6 +3,17 @@ Linear Probing
 Linear probing involves storing one thing in each position and looking ahead in an empty space to store something.
 
 
-Separate Chaining 
+Separate Chaining:
+    - Putting the results in a nested array 
 
-Putting the results in a nested array 
+Adjacency Matrix:
+    - Can take up more space
+    - slower to iterate
+    - Faster to lookup edges
+
+Adjacency List:
+    - can take up less space
+    - faster to iterate over edges
+    - Can be slower to look up edges
+    - Most real world data is sparce, tons of nodes lots of vertices which works best in an adjecency list
+            - A matrix would be massive with a large data set
