@@ -1,0 +1,8 @@
+What is dynamic Programming?
+
+"A method for solving a complex problem by breaking it down into a collection 
+of simpler subprobles, solving each of those subproblems just one, and storing their solutions."
+
+
+Where does the name come from?
+
