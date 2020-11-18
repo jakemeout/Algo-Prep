@@ -28,4 +28,16 @@ mergeSort is an example. Breaking the problem down but not over lapping.
 
 Optimal Substructure
 ----------------------------------------------------------------
-finding the 
+finding the
+
+
+Memoization:
+
+
+
+Tabulation:
+----------------------------------------------------------------
+Storing the results of a previous result in a table(usually an array)
+Usually done in iteration 
+better space complexity can be achieved using tabulation
+
