@@ -1,8 +1,31 @@
 What is dynamic Programming?
-
+----------------------------------------------------------------
 "A method for solving a complex problem by breaking it down into a collection 
 of simpler subprobles, solving each of those subproblems just one, and storing their solutions."
 
 
 Where does the name come from?
+----------------------------------------------------------------
+Richard Bellman, optimizing military schedules.
 
+Dynamic was chosen to capture time varying concept.
+Sounded impressive, helpful to get funding from gov probably. 
+
+Means coming up with an optimal solution, and then applied to programming later in the 1950s. 
+
+
+
+Overlapping Subproblems
+----------------------------------------------------------------
+Break one problem down into smaller pieces that can be reused many times. 
+
+EX: FIBONACCI SEQUENCE
+    starting with 1 1  add the previous integer to the current integer to get the next integer. 
+
+    
+mergeSort is an example. Breaking the problem down but not over lapping. 
+
+
+Optimal Substructure
+----------------------------------------------------------------
+finding the 
