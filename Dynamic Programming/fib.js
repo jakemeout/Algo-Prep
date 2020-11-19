@@ -20,3 +20,8 @@ const fib = (n) => {
     }
     return fibNums
   };
+
+
+
+
+  
