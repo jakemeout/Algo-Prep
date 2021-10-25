@@ -9,6 +9,10 @@
  *      and the el you are currently iterating over.
  *   - Otherwise, return an empty array when the loop is done, meaning none of the elements add upto
  *      the target
+ * 
+ *  Big O:
+ *   - Time Complexity is O(n)- n is the size of the input
+ *   - Space Complexity is O(n) - n is the hashmap ( input + hashmap)
  */
 
 const twoSum = (nums, target) => {
