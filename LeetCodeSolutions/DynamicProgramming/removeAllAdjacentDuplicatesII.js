@@ -45,6 +45,8 @@ const removeDuplicates = (s, k) => {
   let res = "";
 
   for (let [letter, count] of stack) {
+    // .repeat() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+    //
     res += letter.repeat(count);
   }
   return res;
