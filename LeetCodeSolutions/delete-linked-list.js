@@ -37,21 +37,21 @@ class LinkedList {
 const deleteNode = (ll, n) => {
   let current = ll.head;
 
-  if(ll.head.val === n){
-      ll.head = current.next
-      current = ll.head;
+  if (ll.head.val === n) {
+    ll.head = current.next;
+    current = ll.head;
   }
 
   while (current !== null) {
-    if(current.val === n){
-        current.val = current.next.val
-        current.next = current.next.next
+    if (current.val === n) {
+      current.val = current.next.val;
+      current.next = current.next.next;
     }
-    if(current.next.val === n && current.next.next === null){
-        ll.tail.val = current.val;
-        ll.tail.next = null;
+    if (current.next.val === n && current.next.next === null) {
+      ll.tail.val = current.val;
+      ll.tail.next = null;
     }
-    current = current.next
+    current = current.next;
   }
   return ll.print();
 };
@@ -63,6 +63,7 @@ list.append(3);
 list.append(4);
 list.append(5);
 
-deleteNode(list,5);
+deleteNode(list, 5);
 console.log(list);
- 
+
+
