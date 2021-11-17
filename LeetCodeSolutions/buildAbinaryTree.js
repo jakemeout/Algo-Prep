@@ -34,6 +34,21 @@ class BST {
     }
   }
 
+  traverse() {
+    if (this.root === null) {
+      return null;
+    } else {
+      const result = [];
+      const dfs = (node) => {
+        node.left && dfs(node.left);
+        node.right && dfs(node.right);
+        result.push(node.value);
+      };
+      dfs(this.root);
+      return result;
+    }
+  }
+
   add(value) {
     const node = this.root;
     if (node === null) {
@@ -72,3 +87,6 @@ b.add(5);
 b.add(4);
 b.add(14);
 console.log(b);
+
+
+console.log(b.traverse());
