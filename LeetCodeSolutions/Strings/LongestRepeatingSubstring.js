@@ -1,6 +1,7 @@
 /**
  * @param {string} s
  * @return {number}
+ * https://leetcode.com/problems/consecutive-characters/submissions/
  */
 const maxPower = (s) => {
   let i = 0;
