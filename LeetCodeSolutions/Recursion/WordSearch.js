@@ -58,61 +58,63 @@ TRICKS (don't get me):
   - If you have visited an item, mark that you have visted it because you can't use it again and go back and say its adjacent aba(b)
  */
 
-  const wordSearch = (board, word) => {
-	const dfs = (board, i, j, word) => {
-		let outOfBounds = i < 0 || j < 0 || i >= board.length || j >= board[0].length
+const wordSearch = (board, word) => {
+  const dfs = (board, i, j, word) => {
+    let outOfBounds =
+      i < 0 || j < 0 || i >= board.length || j >= board[0].length;
 
-		console.log((!outOfBounds && board[i][j]), word)
-		if(!outOfBounds && (board[i][j] === word[0])){
-			if(word.length === 1){
-				console.log(board)
-				return true
-			}
-			let currentCharacter = board[i][j]
-			board[i][j] = "-" // traversed
-			const y = dfs(board, i+1, j, word.substring(1)) ||
-			dfs(board, i, j+1, word.substring(1)) ||
-			dfs(board, i-1, j, word.substring(1)) ||
-			dfs(board, i, j-1, word.substring(1)) 
-			
-			board[i][j] = currentCharacter
-			return y
-		}
-	}
+    if (!outOfBounds && board[i][j] === word[0]) {
+      if (word.length === 1) {
+        return true;
+      }
+      let currentCharacter = board[i][j];
+      board[i][j] = "-"; // traversed
 
-	for(let i = 0; i < board.length; i++){
-		let row = board[i]
-		for(let j = 0; j < row.length; j++){
-			if(board[i][j] === word[0]){
-				if(dfs(board, i, j, word)) return true 
-			} 
-		}
-	}
-	console.log(board)
-	return false
-}
+      const ifFruitfulPath =
+        dfs(board, i + 1, j, word.substring(1)) ||
+        dfs(board, i, j + 1, word.substring(1)) ||
+        dfs(board, i - 1, j, word.substring(1)) ||
+        dfs(board, i, j - 1, word.substring(1));
 
+      board[i][j] = currentCharacter;
+
+      return ifFruitfulPath;
+    }
+  };
+
+  for (let i = 0; i < board.length; i++) {
+    let row = board[i];
+    for (let j = 0; j < row.length; j++) {
+      if (board[i][j] === word[0]) {
+        if (dfs(board, i, j, word)) {
+          return true;
+        }
+      }
+    }
+  }
+  return false;
+};
 
 const board = [
-	["A","B","C","E"],
-	["S","F","C","A"],
-	["A","D","E","E"],
-]
+  ["A", "B", "C", "E"],
+  ["S", "F", "C", "A"],
+  ["A", "D", "E", "E"],
+];
 
 const board2 = [
-	["C","A","A"],
-	["A","A","A"],
-	["B","C","D"],
-]
+  ["C", "A", "A"],
+  ["A", "A", "A"],
+  ["B", "C", "D"],
+];
 
 const board3 = [
-	["A","B","C","E"],
-	["S","F","C","S"],
-	["A","D","E","E"]
-]
+  ["A", "B", "C", "E"],
+  ["S", "F", "C", "S"],
+  ["A", "D", "E", "E"],
+];
 
+const kword = "AS";
 const word = "ABCCED"; // true
 const word2 = "AAB"; // true
 const word3 = "ABCB"; // false
-console.log(wordSearch(board, word))
-
+console.log(wordSearch(board3, word3));
