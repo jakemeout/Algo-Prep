@@ -168,22 +168,27 @@ const sonarDepths = [
 // console.log(getNumOfDepths(sonarDepths));
 
 const getSumOfGreatestDepths = (sonarDepths) => {
-  let i = 0;
-  let j = 0;
-  let maxWindow = 0;
-  let hashSet = new Set();
+  let arr = [];
+  let sumArr = [];
+  let count = 0;
 
-  while (j < sonarDepths.length) {
-    if (!hashSet.has(sonarDepths[j])) {
-      hashSet.add(sonarDepths[j]);
-      maxWindow = Math.max(hashSet.size, maxWindow);
-      j++;
-    } else {
-      hashSet.delete(sonarDepths[i]);
-      i++;
+  for(let j = 1; j < sonarDepths.length ; j++) {
+    if (sonarDepths[j - 1] < sonarDepths[j]) {
+        arr.push(sonarDepths[j])
     }
   }
-  return maxWindow;
+
+  for(let i = 0; i < arr.length; i++){
+    sumArr.push(arr[i] + arr[i+1] + arr[i+2]);
+  }
+
+  for(let m = 1; m < sumArr.length; m++){
+     if(sumArr[m-1] < sumArr[m]){
+         count +=1;
+     }
+  }
+
+  return count;
 };
 
 console.log(getSumOfGreatestDepths(sonarDepths));
